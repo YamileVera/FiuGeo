@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: bisque;
+    min-height: 100vh;
+    margin: 50px;
+}
+
+header{
+    background-color: black;
+    position: relative;
+    padding: 15px;
+
+}
+
+h1{
+    color: azure;
+    font-family: fantasy;
+    text-align: center;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    width: 100vh;
+    padding: 50px;
+    margin: 50px;
+}
+
+#cuadrado{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(37, 123, 123);
+    position: relative;
+    animation-name: square;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin: 50px;
+}
+
+@keyframes square{
+    from{transform: rotateX(180deg);}
+    to{transform: rotateY(180deg);}
+}
+
+#rectangulo{
+    width: 300px;
+    height: 150px;
+    background-color: gray;
+    animation-name: rectangulo;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rectangulo{
+    0%{background-color: grey; left: 0px; top: 15px;}
+    25%{background-color: rgb(137, 29, 29); left: 200px; top: 15px;}
+    50%{background-color: rgb(89, 27, 4); left: 200px; top: 200px;}
+    75%{background-color: rgb(43, 1, 1); left: 0px; top: 200px}
+    100%{background-color: rgb(46, 61, 62); left: 0px; top: 15px}
+}
+
+#circulo{
+    width: 170px;
+    height: 170px;
+    background-color: rgb(154, 106, 106);
+    border-radius: 50%;
+    margin: 50px;
+    animation-name: circle;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes circle{
+    from{transform:translateX(20vw);}
+    to{transform: translateX(-10vw);}
+
+    0%{background-color: rgb(154, 106, 106); left: 0px; top: 15px;}
+    25%{background-color: rgb(72, 51, 51); left: 200px; top: 15px;}
+    50%{background-color: rgb(39, 19, 13); left: 200px; top: 200px;}
+    75%{background-color: rgb(20, 4, 4); left: 0px; top: 200px}
+    100%{background-color: rgb(1, 62, 64); left: 0px; top: 15px}
+}
+
+
+#triangulo{
+    border-top: solid transparent 0px;
+    border-left: solid transparent 100px;
+    border-right: solid transparent 100px;
+    border-bottom: solid #1f681f 150px;
+    margin: 50px;
+    animation-name: triangulo;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes triangulo{    
+    from{transform: rotateX(360deg);}
+    to{transform: rotateY(180deg);}
+}
+
+#rombo{
+    width: 120px;
+    height: 120px;
+    background: #422099;
+    transform: rotate(45deg) skewX(10deg) skewY(10deg);
+    margin: 70px;
+    animation-duration: 10s;
+    animation-name: rombo;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes rombo{
+    from{
+        background: #422099;
+    }
+
+    to{
+        background:greenyellow;
+    }
+}
+
+#trapecio{
+    border-top: solid transparent 50px;
+    border-left: solid transparent 50px;
+    border-right: solid transparent 50px;
+    border-bottom: solid #044a4f 100px;
+    width: 220px;
+    animation-name: trapecio;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes trapecio{
+    20%, 50%, 80%{
+        transform: translateY(0px);
+    }
+
+    40%{
+        transform: translateY(-45px);
+    }
+
+    60%{
+        transform: translateY(-25px);
+    }
+}
+
+#hexagono{
+    width: 190px;
+    height: 109px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 30px;
+    animation-name: hexagono;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hexagono{
+    from{transform: rotateX(180deg);}
+    to{transform: rotateY(180deg);}
+
+    0%{background-color: black; left: 0px; top: 15px;}
+    25%{background-color: rgb(47, 45, 45); left: 200px; top: 15px;}
+    50%{background-color: rgb(68, 68, 68); left: 200px; top: 200px;}
+    75%{background-color: rgb(74, 74, 74); left: 0px; top: 200px}
+    100%{background-color: rgb(126, 130, 130); left: 0px; top: 15px}
+}
+
+#hexagono::before,
+#hexagono::after
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+}
+
+#hexagono::before{
+    transform: rotate(60deg);
+}
+
+#hexagono::after{
+    transform: rotate(-60deg);
+}
+
+#paralelogramo{
+    border-top: solid transparent 0px;
+    border-left: solid transparent 50px;
+    border-right: solid transparent 0px;
+    border-bottom: solid #a85ea8 100px;
+    width: 200px;
+    margin: 30px;
+    animation-name: paralelogramo;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes paralelogramo{
+    from{transform: rotateX(360deg);}
+    to{transform: rotateY(180deg);}
+}
+
+#pentagono {
+    width: 54px;
+    box-sizing: content-box;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: rgb(163, 127, 127) transparent;
+}
+
+#pentagono::after {
+    content:"";
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent rgb(163, 127, 127) ;
+}
